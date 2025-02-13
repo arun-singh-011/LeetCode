@@ -6,16 +6,17 @@ class Solution:
         maxProfit=0 # Profit
 
 #  Neetcode soln
-        while r < len(prices):
-            if prices[l] < prices[r]:
-             profit = prices[r]-prices[l]
-             maxProfit=max(maxProfit,profit)
+        # while r < len(prices):
+        #     if prices[l] < prices[r]:
+        #      profit = prices[r]-prices[l]
+        #      maxProfit=max(maxProfit,profit)
              
 
-            else:
-               l=r
-            r += 1
-        return maxProfit
+        #     else:
+        #        l=r
+        #     r += 1
+        # print(maxProfit)
+        # return maxProfit
      
 
     #  My Solution
@@ -28,6 +29,7 @@ class Solution:
              profit=prices[r]-prices[l]
              maxProfit  = max(maxProfit,profit)
   
+        print(maxProfit)
         return maxProfit
  
              
