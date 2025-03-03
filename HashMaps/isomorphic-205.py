@@ -2,7 +2,7 @@ class Solution:
     def isIsomorphic(self, s: str, t: str) -> bool:
         
        mapST, mapTS = {}, {}
-    #    h
+
 
        for i in range(len(s)):
         c1, c2 = s[i], t[i]
