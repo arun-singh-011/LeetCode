@@ -15,7 +15,7 @@ class Solution:
         digit = n % 10
         digit = digit ** 2
         output += digit
-        n = n // 10
+        n = n // 1
      return output
    #  h
    
