@@ -6,9 +6,9 @@ class Solution:
         """
         Do not return anything, modify nums1 in-place instead.
         """
-        l = nums1 - 1
-        r = nums2 - 1
+        # l = nums1 - 1
+        # r = nums2 - 1
 
-        if nums1[l] > nums2[r]:
-            nums1[l] = l
+        # if nums1[l] > nums2[r]:
+        #     nums1[l] = l
 
