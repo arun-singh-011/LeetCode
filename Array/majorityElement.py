@@ -3,13 +3,42 @@ from collections import Counter
 from collections import defaultdict
 class Solution:
     def majorityElement(self, nums: List[int]) -> int: 
-     res, count =0,0
+    
+     freq = {}
      for n in nums:
-        if count == 0:
-            res = n
-        count += (1 if n == res else -1)
-     print(res)
-     return res
+        freq[n] = freq.get(n,0) + 1
+   
+     print(max(freq, key = freq.get))
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    majorityElement(self=0,nums=[2,2,2,6,2,3])
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    #  res, count =0,0
+    #  for n in nums:
+    #     if count == 0:
+    #         res = n
+    #     count += (1 if n == res else -1)
+    #  print(res)
+    #  return res
     
 ########################################################
 ########################################################
@@ -41,4 +70,3 @@ class Solution:
     #      print(f"frequency is: {count}")  
     #  print(f"Majority number is: {nums[r]}")  
  
-    majorityElement(self=0,nums=[2,2,2,6,2,3])
