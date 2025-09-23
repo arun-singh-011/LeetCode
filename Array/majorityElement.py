@@ -6,10 +6,11 @@ class Solution:
     
      freq = {}
      for n in nums:
-        freq[n] = freq.get(n,0) + 1
+        freq[n] = 1 + freq.get(n,0)
    
      print(max(freq, key = freq.get))
     
+    # Boyer-Moore algorithm
     
     
     
