@@ -1,9 +1,42 @@
 from typing import List
 class Solution:
     def maxProfit(self, prices: List[int]) -> int:
-        l=0 # Buy
-        r=1 # Sell
-        maxProfit=0 # Profit
+
+     
+     l = 0
+     r = 1
+     maxProfit = 0
+
+     for r in range(1,len(prices)):
+       if prices[r] < prices[l]:
+         l = r
+       elif prices[r] > prices[l]:
+         profit = prices[r] - prices[l]  
+         l += 0
+         maxProfit = max(maxProfit, profit)
+     
+
+
+     print( maxProfit)
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        # l=0 # Buy
+        # r=1 # Sell
+        # maxProfit=0 # Profit
 
 #  Neetcode soln
         # while r < len(prices):
@@ -19,24 +52,24 @@ class Solution:
         # return maxProfit
      
 
-    #  My Solution
-        for r in range(0,len(prices)):
-            if prices[l]>prices[r]:
+    # #  My Solution
+    #     for r in range(0,len(prices)):
+    #         if prices[l]>prices[r]:
        
-               l=r
+    #            l=r
 
-            elif prices[l]<prices[r]:
-             profit=prices[r]-prices[l]
-             maxProfit  = max(maxProfit,profit)
+    #         elif prices[l]<prices[r]:
+    #          profit=prices[r]-prices[l]
+    #          maxProfit  = max(maxProfit,profit)
   
-        print(maxProfit)
-        return maxProfit
+    #     print(maxProfit)
+    #     return maxProfit
  
              
        
             
  
-        print(maxProfit)
+    #     print(maxProfit)
  
     
     maxProfit(self=0,prices=[7,1,2,6,3])
