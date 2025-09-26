@@ -1,21 +1,19 @@
 class Solution:
     def isAnagram(self, s: str, t: str) -> bool:
+        # This is the solution by Neetcode:
         if len(s) != len(t):
             return False
         
-        countS = {}
-        countT = {}
+        countS, countT = {}, {}
 
-        for i in range(len(s)):
-            countS[s[i]] = 1 + countS.get(s[i], 0)
-            countT[s[i]] = 1 + countT.get(s[i], 0)
-        for c in countS:
-            countS[c] != countT[c]
-            return False
+        for char in s:
+            countS[char] = countS.get(char, 0) + 1 
+        for char in t:
+            countT[char] = countT.get(char,0) +1
+        return countS == countT
 
-      
 
-        #   Inefficient solution
+        #   Inefficient solution it was my solution:
         # sortedS = ''.join(sorted(s))
         # sortedT = ''.join(sorted(t))
         # print(sortedS)
